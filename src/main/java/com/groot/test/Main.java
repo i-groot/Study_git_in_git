@@ -1,7 +1,5 @@
 package com.groot.test;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
 import java.util.Objects;
 
 public class Main {
@@ -12,9 +10,21 @@ public class Main {
         haha = "haha";
         System.out.println("Hello World.");
         System.out.println("This will be merged.");
+        int ans = getAns();
+        System.out.println(ans);
+        System.out.println(getLength("I am studying."));
         System.out.println(countChar("Hello World.", 'l'));
+
     }
-    
+
+    private static int getAns() {
+        return 10 + 15;
+    }
+
+    private static int getLength(String str) {
+        return Objects.isNull(str) ? 0 : str.length();
+    }
+
     private static int countChar(String str, char ch) {
         if (Objects.isNull(str)) return 0;
         byte[] bytes = str.getBytes();
